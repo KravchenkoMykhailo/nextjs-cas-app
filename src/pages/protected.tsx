@@ -8,10 +8,11 @@ const ProtectedPage: React.FC = () => {
 
   useEffect(() => {
     const authToken = Cookies.get("authToken");
+    console.log("authToken=" + authToken);
     if (!authToken) {
       router.push("/login");
     }
-  }, [router]);
+  }, []);
 
   return (
     <div>
